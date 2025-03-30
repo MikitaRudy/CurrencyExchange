@@ -1,7 +1,6 @@
 package com.mikitarudy.util;
 
 import com.mikitarudy.exception.ValidationException;
-import com.mikitarudy.model.Currency;
 
 import java.math.BigDecimal;
 import java.util.regex.Pattern;
@@ -58,14 +57,5 @@ public final class Validator {
         } catch (NumberFormatException e) {
             throw new ValidationException("Rate must be a number");
         }
-    }
-
-    public static void validateCurrency(Currency currency){
-        if (currency == null) {
-            throw new ValidationException("Currency is null");
-        }
-        Validator.checkCode(currency.getCode());
-        Validator.checkName(currency.getFullName());
-        Validator.checkSign(currency.getSign());
     }
 }
