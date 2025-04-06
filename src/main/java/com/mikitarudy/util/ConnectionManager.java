@@ -8,8 +8,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 public final class ConnectionManager {
-    //private static final String DB_URL = "jdbc:sqlite:resource:data.db";
-    private static final String DB_URL = "jdbc:sqlite:D:/JavaPracties/CurrencyExchange/src/main/resources/data.db";
+    private static final String DB_URL = "jdbc:sqlite::resource:identifier.sqlite";
 
     private static final HikariDataSource HIKARI_DATA_SOURCE;
     private static final HikariConfig HIKARI_CONFIG;
